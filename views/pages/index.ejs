@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAVANDAZ</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="" type="image/png">
+</head>
+<body>
+
+  <!--header-->
+  <header class="header" id = "header">
+    <div class = "head-top">
+      <div class = "site-name">
+        <span>LAVANDAZ</span>
+      </div>
+      <div class="site-nav">
+        <span id="nav-btn">MENU<i class="fas fa-bars"></i>
+        </span>
+      </div>
+    </div>
+
+    <div class="head-bottom flex">
+      <h3>GET LUXURY AND COMFORT</h3>
+      <h2>Welcome To The Place Where Luxury Meets Affordability</h2>
+      <p>Enjoying a cool climate, Hotel Lavandaz is located centrally in Bandung City, just 650 metres from Bandung Train Station. It offers a relaxing stay with free Wi-Fi in public areas, swimming pool area, spa and gym area's. 23 Paskal Shopping Centre, Pasar Baru Bandung and Braga City Walk are within walking distance from the hotel.</p>
+      <a href="#rooms" class="head-btn">Explore Now</a>
+    </div>
+  </header>
+<!--end of header-->
+
+<!--side navbar-->
+  <div class = "sidenav" id = "sidenav">
+    <span class = "cancel-btn" id = "cancel-btn">
+      <i class = "fas fa-times"></i>
+    </span>
+
+  <ul class="navbar">
+    <li><a href="#header">Home</a></li>
+    <li><a href="#aboutus">About Us</a></li>
+    <li><a href="#services">Our Services</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+    <a href="/logout">
+      <button class="btn log-out">Log Out</button>
+    </a>
+</div>
+<!--end of side navbar-->
+
+<!--fullscreen modal-->
+<div id="modal"></div>
+
+<!--end fullscreen-->
+
+<!--body content-->
+<section class = "services sec-width" id = "services">
+<div class="title">
+  <h2>Facilities & Services</h2>
+</div>
+
+<div class="services-container">
+  <!--single services-->
+  <article class="services">
+    <div class="service-icon">
+      <span>
+        <i class="fas fa-wifi"></i>
+      </span>
+    </div>
+      <div class="services-content">
+        <h2>High Speed Wifi</h2>
+    </div>
+  </article>
+  <!--end of single service-->
+  <!--single services-->
+  <article class="services">
+    <div class="service-icon">
+      <span>
+        <i class="fas fa-car"></i>
+      </span>
+    </div>
+      <div class="services-content">
+        <h2>Parking Space</h2>
+    </div>
+  </article>
+  <!--end of single service-->
+  <!--single services-->
+  <article class="services">
+    <div class="service-icon">
+      <span>
+        <i class="fas fa-utensils"></i>
+      </span>
+    </div>
+      <div class="services-content">
+        <h2>Restaurant & Bar</h2>
+    </div>
+  </article>
+  <!--end of single service-->
+   <!--single services-->
+   <article class="services">
+    <div class="service-icon">
+      <span>
+        <i class="fas fa-spa"></i>
+      </span>
+    </div>
+      <div class="services-content">
+        <h2>Spa Center</h2>
+    </div>
+  </article>
+  <!--end of single service-->
+   <!--single services-->
+   <article class="services">
+    <div class="service-icon">
+      <span>
+        <i class="fas fa-dumbbell"></i>
+      </span>
+    </div>
+      <div class="services-content">
+        <h2>Fitness Center</h2>
+    </div>
+  </article>
+  <!--end of single service-->
+   <!--single services-->
+   <article class="services">
+    <div class="service-icon">
+      <span>
+        <i class="fas fa-water"></i>
+      </span>
+    </div>
+      <div class="services-content">
+        <h2>Swimming Pool</h2>
+    </div>
+  </article>
+  <!--end of single service-->
+</div>
+</section>
+
+<section class="rooms sec-width" id="rooms">
+  <div class="title">
+    <h2>Rooms</h2>
+  </div>
+  <div class="rooms-container">
+    <!--single room-->
+    <% rooms.forEach((room) => { %>
+      <article class="room">
+        <div class="room-image">
+          <img src="<%= room.image %> " alt="">
+        </div>
+        <div class="room-text">
+          <h3><%= room.type %></h3>
+          <p>
+            <%= room.desc %>
+          </p>
+          <p class="rate">
+            <span><%= room.price %></span> /Per Night
+          </p>
+          <a href='/book/<%= room.id %>' >
+            <button class="btn">
+              Book Now
+            </button>
+            </a>
+        </div>
+      </article>
+    <% }); %>
+  </div>
+</section>
+
+<section class="customers" id="cutomers">
+  <div class="sec-width">
+    <div class="title">
+      <h2>Customers</h2>
+    </div>
+    <div class="customers-container">
+      <!--single customer-->
+      <div class="customer">
+        <div class="rating">
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+        </div>
+        <h3>Amazing</h3>
+        <p>I will recommend the hotel to my colleagues.</p>
+        <span>Andika</span>
+      </div>
+      <!--end of single customer-->
+      <!--single customer-->
+      <div class="customer">
+        <div class="rating">
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="far fa-star"></i></span>
+        </div>
+        <h3>We love it!</h3>
+        <p>This hotel is very comfortable, but the price offered is pricey.</p>
+        <span>Bunga</span>
+      </div>
+      <!--end of single customer-->
+       <!--single customer-->
+       <div class="customer">
+        <div class="rating">
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+        </div>
+        <h3>Comfortable</h3>
+        <p>This hotel verry reccomended and comfortable to stay here, also the service was friendly!</p>
+        <span> Chantika</span>
+      </div>
+      <div class="customer">
+        <div class="rating">
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+        </div>
+        <h3>Beautiful View</h3>
+        <p>I like this hotel because it provides amazing views in the form of swimming pools etc.</p>
+        <span> Rizki</span>
+      <!--end of single customer--> 
+    </div>
+  </div>
+</section>
+
+<!--end of body content-->
+
+<!--footer-->
+<footer class="footer-content">
+  <div class="footer-container">
+    <div class="aboutus" id="aboutus">
+      <h2>About Us</h2>
+      <p>Reach me on:</p>
+      <ul class="social-icons">
+        <li class="flex">
+        <i class="fa fa-twitter fa-2x"></i>
+      </li>
+        <li class="flex">
+        <i class="fa fa-facebook fa-2x"></i>
+      </li>
+        <li class="flex">
+        <i class="fa fa-instagram fa-2x"></i>
+      </li>
+    </ul>
+  </div>
+      <div>
+        <h2>Useful Links</h2>
+        <a href="#header">Blog</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#">Subcription</a>
+      </div>
+      <div>
+        <h2>Privacy</h2>
+        <a href="#career">Career</a>
+        <a href="#footer-container">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#services">Services</a>
+      </div>
+      <div>
+        <h2>Have A Question</h2>
+        <div class="contact-item" id="contact">
+          <span>
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+          <span>
+            Bandung City
+          </span>
+        </div>
+        <div class="contact-item">
+          <span>
+            <i class="fas fa-phone-alt"></i>
+          </span>
+          <span>
+            (+62) 8112 2222 941
+          </span>
+        </div>
+        <div class="contact-item">
+          <span>
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span>
+            lavandaz@gmail.com
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--end of footer-->
+  <script src="/js/script.js"></script>
+</body>
+</html>

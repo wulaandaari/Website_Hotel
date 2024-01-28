@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="background">
+    </div>
+    <div class="signup">
+        <h1>SIGN UP</h1>
+        <!-- <h4>Free For Login</h4> -->
+        <form method="post" action="/auth/register">
+            <label>Full Name</label>
+            <input type="text" placeholder="Masukkan Nama Lengkap Anda" id="name" name="name">
+            <label>Username</label>
+            <input type="text" placeholder="Masukkan Username Anda" id="username" name="username">
+            <label>Email</label>
+            <input type="email" placeholder="lavandaz@gmail.com" id="email" name="email">
+            <label>Age</label>
+            <input type="age" placeholder="Masukkan Umur Anda" id="age" name="age">
+            <label>Password</label>
+            <input type="password" placeholder="Masukkan Password Anda" id="password" name="password">
+            <button type="submit">Sign up</button>
+        </form>
+
+    <p class="para-2">Already have an account? <a href="/login">Login</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="background-book"></div>
+    <div class="payment">
+        <h1><b><%= price %></b></h1>
+        <p><b>BANK BCA: 17181920</b></p>
+        <ul>
+            <li>
+            <i>A/n. Hotel Lavandaz Luxury</i>
+            </li>
+        </ul>
+        <p><b>BANK MANDIRI: 126001121113000</b></p>
+        <ul>
+            <li>
+            <i>A/n. Hotel Lavandaz Luxury</i>
+            </li>
+        </ul>
+        <form class="payment-button" method="post" action='/payment/<%=bookId%>?amount=<%=amount%>''>
+           <button type="submit" class="btn-payment">PAYMENT</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="background-book">
+  </div>
+  <div class="booking-form">
+    <h2><b><%= room.type %></b></h2>
+    <h3><b><%= room.price %></b></h3>
+    <p><%= room.desc%></p>
+      <form class="book-form" method="post" action="/book/<%= room.id %>">
+        <div class="form-item">
+        <label for="checkin-date">Check In Date: </label>
+        <input type="date" id="checkin-date" name="checkIn" >
+      </div>
+      <div class="form-item">
+        <label for="checkout-date">Check Out Date: </label>
+        <input type="date" id="checkout-date" name="checkOut">
+      </div>
+      <!-- <div class="form-item">
+        <label for="adult">Person: </label>
+        <input type="number" min="1" value="1" id="adult">
+      </div> -->
+      <!-- <div class="form-item">
+        <label for="adult">Children: </label>
+        <input type="number" min="0" value="1" id="children">
+      </div> -->
+      <div class="form-item">
+        <button class="btn-book">Book Now</button>
+          </form>
+      </div>
+    
+</body>
+</html>
